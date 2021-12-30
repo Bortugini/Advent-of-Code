@@ -1,6 +1,6 @@
 package day1;
 
-public class Main {
+public class Day1 {
 
     public static void main(String[] args) {
         int[] nums = {199, 200, 208, 210, 200, 207, 240, 269, 260, 263};
