@@ -27,14 +27,17 @@ Created on
 #     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 #     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 # ]
+import os
+
 map_2d = []
 coordinates = []
 
 
 def read_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     global coordinates
     inp = ""
-    with open("/Advent of Code/2021\Day 5\input.txt", "r") as file:
+    with open(ROOT_DIR + "\input.txt", "r") as file:
         for line in file.readlines():
             inp += line
     coordinates = []  # column, row , column, row

@@ -4,8 +4,10 @@ Created on
 
 @author: Thomas
 '''
+import os
 
-with open("D:/Programirung/Pycharm/Python/Advent of Code/2020/Day 3/map") as file:
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(ROOT_DIR + "/map") as file:
     lines = file.readlines()
 count = 0
 index = 0

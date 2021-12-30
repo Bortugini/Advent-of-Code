@@ -5,11 +5,14 @@ Created on
 @author: Thomas
 '''
 
+import os
+
 
 # method to load data from a file
 def load_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     inp = []
-    with open("/Advent of Code/2021\Day 8\input.txt", "r") as file:
+    with open(ROOT_DIR + "/input.txt", "r") as file:
         for i in file.readlines():
             inp.append(i.replace(f"\n", ""))
     return inp
@@ -53,6 +56,7 @@ def is_lowest_point(row, col, inp):
     points = get_points(row, col, inp)
     for point in points:
         print(point[0], point[1])
+
 
 def find_lowest_points(inp):
     for row in range(len(inp)):

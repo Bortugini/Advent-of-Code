@@ -4,6 +4,8 @@ Created on
 
 @author: Thomas
 """
+import os
+
 import numpy as np
 
 # numbers = [7, 4, 9, 5, 11, 17, 23, 2, 0, 14, 21, 24, 10, 16, 13, 6, 15, 25, 12, 22, 18, 20, 8, 19, 3, 26, 1]
@@ -31,9 +33,10 @@ fields = []
 
 
 def inp():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     global numbers
     global fields
-    with open("/Advent of Code/2021\Day 4\input.txt", "r") as file:
+    with open(ROOT_DIR + "\input.txt", "r") as file:
         numbers = [np.uint8(number) for number in file.readline().strip().split(",")]
         raw_sheets = file.readlines()
         for i in range(0, len(raw_sheets), 6):

@@ -7,9 +7,13 @@ Created on
 
 
 # method to load data from a file
+import os
+
+
 def load_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     inp = []
-    with open("/Advent of Code/2021\Day 8\input.txt", "r") as file:
+    with open(ROOT_DIR + "\input.txt", "r") as file:
         for i in file.readlines():
             inp.append(i.replace(f"\n", ""))
     return inp

@@ -7,6 +7,9 @@ Created on
 
 
 # crab class represents a crab-submarine
+import os
+
+
 class Crab:
 
     def __init__(self, position):
@@ -28,8 +31,9 @@ class Crab:
 
 # method to load data from a file
 def load_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     inp = []
-    with open("/Advent of Code/2021\Day 7\Input.txt", "r") as file:
+    with open(ROOT_DIR + "\Input.txt", "r") as file:
         for num in file.readline().split(","):
             if num.isdigit():
                 inp.append(int(num))

@@ -4,9 +4,11 @@ Created on
 
 @author: Thomas
 '''
-import  re
+import os
+import re
 
-with open("D:/Programirung/Pycharm/Python/Advent of Code/2020/Day 2/list") as file:
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(ROOT_DIR + "/list") as file:
     li = file.readlines()
 
 valid = 0

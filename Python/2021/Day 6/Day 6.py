@@ -7,6 +7,9 @@ Created on
 
 
 # class represents a lanternfish
+import os
+
+
 class Lanternfish():
 
     def __init__(self, start_day):
@@ -22,8 +25,9 @@ class Lanternfish():
 
 
 def load_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     inp = []
-    with open("/Advent of Code/2021\Day 6\input.txt", "r") as file:
+    with open(ROOT_DIR + "\input.txt", "r") as file:
         for num in file.read():
             if num.isdigit():
                 inp.append(int(num))

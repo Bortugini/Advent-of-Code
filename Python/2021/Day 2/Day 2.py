@@ -6,13 +6,16 @@ Created on
 '''
 # inp = ["forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"]
 # solution 150
+import os.path
+
 inp = []
 
 
 def read_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     global inp
     inp = []
-    with open("/Advent of Code/2021\Day 2\data.txt", "r") as file:
+    with open(ROOT_DIR + "\data.txt", "r") as file:
         for line in file.readlines():
             inp.append(line)
 

@@ -5,13 +5,16 @@ Created on
 @author: Thomas
 '''
 # bytes = ["00100", "11110", "10110", "10111", "10101", "01111", "00111", "11100", "10000", "11001", "00010", "01010"]
+import os
+
 bytes = []
 
 
 def read_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     global bytes
     bytes = []
-    with open("/Advent of Code/2021\Day 3\Data.txt", "r") as file:
+    with open(ROOT_DIR + "\Data.txt", "r") as file:
         for line in file.read().split():
             bytes.append(line)
 

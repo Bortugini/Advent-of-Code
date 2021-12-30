@@ -4,13 +4,16 @@ Created on
 
 @author: Thomas
 '''
-datas = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
-# datas = []
+import os
+
+# datas = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
+datas = []
 
 # methode to read data from a file
 def read_file():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     global datas
-    with open("/Advent of Code/2021\Day 1\data.txt", "r") as file:
+    with open(ROOT_DIR + "\data.txt", "r") as file:
         for line in file.read().split():
             datas.append(int(line))
 
@@ -38,6 +41,6 @@ def part_2():
 
 
 if __name__ == '__main__':
-    # read_file()
+    read_file()
     part_1()
     part_2()

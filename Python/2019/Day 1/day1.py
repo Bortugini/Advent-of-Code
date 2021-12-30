@@ -5,8 +5,10 @@ Created on
 100756 /3 abrunden = 33585 -2 =33583
 @author: Thomas
 '''
+import os
 
-with open("D:/Programirung/Pycharm/Python/Advent of Code/2019/Day 1/fuel") as file:
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(ROOT_DIR + "/fuel") as file:
     fuel = list(map(int, file.readlines()))
 res = []
 for i in fuel:

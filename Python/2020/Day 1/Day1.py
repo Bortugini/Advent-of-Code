@@ -4,8 +4,10 @@ Created on
 
 @author: Thomas
 '''
+import os
 
-with open("D:/Programirung/Pycharm/Python/Advent of Code/2020/Day 1/numbers") as file:
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(ROOT_DIR + "/numbers") as file:
     numbers = list(map(int, file.readlines()))
 
 for x in numbers:
