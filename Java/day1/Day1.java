@@ -1,10 +1,15 @@
 package day1;
 
+/**
+ * Lösung 1 7
+ * Lösung 2 5
+ */
 public class Day1 {
 
     public static void main(String[] args) {
         int[] nums = {199, 200, 208, 210, 200, 207, 240, 269, 260, 263};
         int count = 0, prevNum = 0;
+
 //************************* Lösung 1 *************************
         for (int i = 0; i < nums.length - 1; i++) {
             prevNum = nums[i];
@@ -13,6 +18,7 @@ public class Day1 {
             }
         }
         System.out.printf("Lösung 1 ist: %s%n", count);
+
 //************************* Lösung 2 *************************
         count = 0;
         int sum = 0, sum2 = 0;
