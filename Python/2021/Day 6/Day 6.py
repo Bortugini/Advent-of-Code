@@ -37,7 +37,7 @@ def load_file():
 if __name__ == '__main__':
     days = [3, 4, 3, 1, 2]
     fishes = []
-    days = load_file()
+    # days = load_file()
     # create fishes
     for day in days:
         fishes.append(Lanternfish(day))
