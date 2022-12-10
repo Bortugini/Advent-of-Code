@@ -10,7 +10,7 @@ elf = []
 calories = 0
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-with open(ROOT_DIR + "/calories") as file:
+with open(ROOT_DIR + "\calories.txt") as file:
     lines = file.readlines()
 
 for i in range(len(lines)):
